@@ -57,12 +57,12 @@ environment. Follow the official
 ### Initialization
 
 The first step is to initialize the workspace folder (``my-workspace``) where
-the ``example-application`` and all Zephyr modules will be cloned. Run the following
+the ``zephyr-nix-template`` and all Zephyr modules will be cloned. Run the following
 command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/zephyrproject-rtos/example-application --mr main my-workspace
+west init -m https://github.com/Gibson431/zephyr-nix-template --mr main my-workspace
 # update Zephyr modules
 cd my-workspace
 west update
@@ -73,7 +73,7 @@ west update
 To build the application, run the following command:
 
 ```shell
-cd example-application
+cd zephyr-nix-template
 west build -b $BOARD app
 ```
 
