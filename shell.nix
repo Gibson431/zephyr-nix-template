@@ -1,4 +1,5 @@
-{ mkShell, zephyr, callPackage, cmake, ninja, clang, dfu-util, lib, }:
+{ mkShell, zephyr, callPackage, cmake, ninja, clang, dfu-util, sphinx, doxygen
+, lib, }:
 
 mkShell {
   packages = [
@@ -10,6 +11,8 @@ mkShell {
     ninja
     clang
     dfu-util
+    sphinx
+    doxygen
   ];
 }
 
