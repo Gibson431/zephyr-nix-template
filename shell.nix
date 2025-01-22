@@ -1,0 +1,15 @@
+{ mkShell, zephyr, callPackage, cmake, ninja, clang, dfu-util, lib, }:
+
+mkShell {
+  packages = [
+    # (zephyr.sdk.override { targets = [ "arm-zephyr-eabi" ]; })
+    zephyr.sdkFull
+    zephyr.pythonEnv
+    zephyr.hosttools-nix
+    cmake
+    ninja
+    clang
+    dfu-util
+  ];
+}
+
